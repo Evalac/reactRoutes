@@ -1,4 +1,12 @@
 import { NavLink, Outlet } from 'react-router-dom';
+import styled from 'styled-components';
+
+const StylendLink = styled(NavLink)`
+  color: green;
+  &.active {
+    color: red;
+  }
+`;
 
 function Layout() {
   return (
@@ -6,15 +14,15 @@ function Layout() {
       <header>
         <ul>
           <li>
-            <NavLink to="/">Home</NavLink>
+            <StylendLink to="/">Home</StylendLink>
           </li>
           <li>
-            <NavLink to="/dogs">Collections</NavLink>
+            <StylendLink to="/dogs">Collections</StylendLink>
           </li>
         </ul>
       </header>
-      {/* це щоб вибрати де саме буде рендеритись колекція */}
       <main>
+        {/* це щоб вибрати де саме буде рендеритись колекція */}
         <Outlet />
       </main>
       <footer>Footer</footer>
