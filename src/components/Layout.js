@@ -11,13 +11,16 @@ const StylendLink = styled(NavLink)`
 function Layout() {
   return (
     <div>
-      <header>
+      <header className="Layout-header">
         <ul>
           <li>
             <StylendLink to="/">Home</StylendLink>
           </li>
           <li>
-            <StylendLink to="/dogs">Collections</StylendLink>
+            <StylendLink to="/dogs">Dogs</StylendLink>
+          </li>
+          <li>
+            <StylendLink to="/products">Products</StylendLink>
           </li>
         </ul>
       </header>

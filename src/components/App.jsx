@@ -5,6 +5,7 @@ import DogDetails from 'pages/DogDetails';
 import Layout from './Layout';
 import Gallary from './Gallary';
 import Subbreeds from './Subbreeds';
+import Products from './Products';
 
 export const App = () => {
   return (
@@ -12,12 +13,17 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="/products" element={<Products />} />
           <Route path="/dogs" element={<Dogs />} />
           <Route path="/dogs/:dogId" element={<DogDetails />}>
             <Route path="subbreeds" element={<Subbreeds />} />
             <Route path="gallary" element={<Gallary />} />
           </Route>
         </Route>
+        <Route
+          path="*"
+          element={<p>Такої сторінки не знайдено, перейдіть назад</p>}
+        />
       </Routes>
     </div>
   );
